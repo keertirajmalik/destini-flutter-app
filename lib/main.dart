@@ -52,7 +52,11 @@ class _StoryPageState extends State<StoryPage> {
                 child: RaisedButton(
                   color: Colors.red, // background
                   textColor: Colors.white, // foreground
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      storyBrain.nextStory(choiceNumber: 2);
+                    });
+                  },
                   child: Text(
                     storyBrain.getChoice1(),
                     style: TextStyle(fontSize: 20.0),
@@ -67,9 +71,13 @@ class _StoryPageState extends State<StoryPage> {
                 child: RaisedButton(
                   color: Colors.blue, // background
                   textColor: Colors.white, // foreground
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      storyBrain.nextStory(choiceNumber: 2);
+                    });
+                  },
                   child: Text(
-                    'Choice 2',
+                    storyBrain.getChoice2(),
                     style: TextStyle(fontSize: 20.0),
                   ),
                 ),
