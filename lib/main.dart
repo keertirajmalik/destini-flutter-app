@@ -68,17 +68,20 @@ class _StoryPageState extends State<StoryPage> {
               ),
               Expanded(
                 flex: 2,
-                child: RaisedButton(
-                  color: Colors.blue, // background
-                  textColor: Colors.white, // foreground
-                  onPressed: () {
-                    setState(() {
-                      storyBrain.nextStory(choiceNumber: 2);
-                    });
-                  },
-                  child: Text(
-                    storyBrain.getChoice2(),
-                    style: TextStyle(fontSize: 20.0),
+                child: Visibility(
+                  visible: storyBrain.buttonShouldBeVisible(),
+                  child: RaisedButton(
+                    color: Colors.blue, // background
+                    textColor: Colors.white, // foreground
+                    onPressed: () {
+                      setState(() {
+                        storyBrain.nextStory(choiceNumber: 2);
+                      });
+                    },
+                    child: Text(
+                      storyBrain.getChoice2(),
+                      style: TextStyle(fontSize: 20.0),
+                    ),
                   ),
                 ),
               ),
