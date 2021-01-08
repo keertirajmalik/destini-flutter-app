@@ -1,3 +1,4 @@
+import 'package:destini/story_brain.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,8 @@ class Destini extends StatelessWidget {
     );
   }
 }
+
+StoryBrain storyBrain = StoryBrain();
 
 class StoryPage extends StatefulWidget {
   @override
@@ -39,7 +42,7 @@ class _StoryPageState extends State<StoryPage> {
                 flex: 12,
                 child: Center(
                   child: Text(
-                    'Question goes here',
+                    storyBrain.getStory(),
                     style: TextStyle(fontSize: 25.0),
                   ),
                 ),
@@ -51,7 +54,7 @@ class _StoryPageState extends State<StoryPage> {
                   textColor: Colors.white, // foreground
                   onPressed: () {},
                   child: Text(
-                    'Choice 1',
+                    storyBrain.getChoice1(),
                     style: TextStyle(fontSize: 20.0),
                   ),
                 ),
