@@ -40,9 +40,10 @@ class _StoryPageState extends State<StoryPage> {
               ),
               Expanded(
                 flex: 2,
-                child: FlatButton(
+                child: RaisedButton(
+                  color: Colors.red, // background
+                  textColor: Colors.white, // foreground
                   onPressed: () {},
-                  color: Colors.red,
                   child: Text(
                     'Choice 1',
                     style: TextStyle(fontSize: 20.0),
@@ -54,9 +55,10 @@ class _StoryPageState extends State<StoryPage> {
               ),
               Expanded(
                 flex: 2,
-                child: FlatButton(
+                child: RaisedButton(
+                  color: Colors.blue, // background
+                  textColor: Colors.white, // foreground
                   onPressed: () {},
-                  color: Colors.blue,
                   child: Text(
                     'Choice 2',
                     style: TextStyle(fontSize: 20.0),
